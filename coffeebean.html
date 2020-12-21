@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ko">
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css" />
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /** 콘텐트 영역을 감싸는 영역 */
+    #wrap1 {
+        width: 1900px;
+        height: 930px;
+        margin: auto;
+    }
+
+    /** 상단 고정영역1 */
+    .menu1 {
+        width: 100%;
+        height: 39.98px;
+        background-color: #eee;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000000;
+    }
+
+    /** 상단 두번째 고정 영역 */
+    .menu2 {
+        width: 100%;
+        height: 99.98px;
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-top: 39.98px;
+        z-index: 10000;
+    }
+
+    /* 메인 광고 이미지 영역 */
+    .thumb a span {
+        display: block;
+        width: auto;
+
+    }
+
+    /* 메인 광고 이미지 배치 */
+    .thumb img {
+        width: auto;
+        display: block;
+        margin-top: 140px;
+
+    }
+
+    /* 서브 광고 이미지 배치 */
+    .thumb2 img {
+        margin-top: -1px;
+
+    }
+
+    /*리스트 속성으로 묶인 상단 고정메뉴 텍스트 위치 및 글씨 크기 설정*/
+    li {
+        display: inline-block;
+        font-size: 13px;
+        position: relative;
+        left: 780px;
+
+    }
+
+    /*리스트 속성으로 묶인 상단 고정메뉴 링크부분 위치 설정*/
+    li a {
+        display: block;
+        padding: 3px 8px;
+        text-decoration: none;
+    }
+
+    /* 최상단 고정메뉴 영역 크기지정 */
+    .fir {
+        width: 1300px;
+        position: relative;
+        margin: auto;
+
+    }
+
+    /* 최상단 고정메뉴 영역속 커피콩 아이콘 검정색 뒷배경 크기설정 */
+    .bean {
+        display: block;
+        width: 62px;
+        height: 40px;
+        background-color: black;
+
+    }
+
+    /* 최상단 고정메뉴 영역속 커피콩 아이콘 크기및 위치설정 */
+    .bean img {
+        position: relative;
+        top: 6px;
+        right: -12px;
+    }
+
+    /*두번째 메뉴의 전체 영역*/
+    .sec1 {
+        height: 100px;
+        width: 1300px;
+        position: relative;
+        margin: auto;
+
+    }
+
+    /*두번째 메뉴의 리스트 영역*/
+    .sec {
+        display: inline-block;
+        font-size: 15px;
+        padding: 10px 35px;
+        position: relative;
+        left: 20px;
+        line-height: 99.98px;
+        top: -25px;
+        vertical-align: bottom;
+    }
+
+    /*두번째 메뉴의 커피빈 로고 위치 설정*/
+    .sec:nth-child(1) {
+        top: -1px;
+    }
+
+
+    .headline {
+        font-size: 20px;
+        font-weight: bold;
+        width: 1200px;
+        height: 700px;
+        position: relative;
+        margin: auto;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    /** 플러그인 테스트 **/
+    .slideImg .headline {
+        height: 350px;
+        margin: 0px auto;
+    }
+
+    .slideImg .headline .product {
+        width: 300px;
+        height: 350px;
+        display: inline-block;
+
+    }
+
+    /* 인스타그램 관련 파트 크기설정 */
+    .instaArea {
+        height: 619.88px;
+        width: auto;
+        background-color: #7C51A1;
+    }
+
+    /* 맨마지막 footer부분 영역 크기 설정 */
+    #footer {
+        height: 490px;
+        width: 100%;
+        background-color: #E2E2E2;
+    }
+
+    .mainTitle {
+        display: block;
+        padding: 30px;
+    }
+
+    .box2 {
+        margin-top: -50px;
+    }
+
+
+    .instaArea ul {
+        display: block;
+        position: relative;
+        width: 1300px;
+        height: 619.88px;
+        padding: 50px 0px;
+    }
+
+    .instaArea li {
+        display: inline-block;
+        float: left;
+    }
+
+    .instaArea img {
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        height: 200px;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 전체 박스 영역 -->
+    <div id="container">
+        <!-- 위의 선택 메뉴 영역 -->
+        <div id="header">
+            <div class="wrap">
+                <div class="menu1">
+                    <ul class="fir">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">매장찾기</a></li>
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">단체 및 기업구매</a></li>
+                        <li><a href="#">고객서비스</a></li>
+                        <li><span class="bean"><a href="#"><img src="img/3.png" alt="커피콩" /></a></span></li>
+                    </ul>
+                </div>
+                <div class="menu2">
+                    <ul class="sec1">
+                        <li class="sec"><a href="#"><img src="img/logo.png" alt=" 커피빈 로고"></a></li>
+                        <li class="sec"><a href="#">BUY ONLINE</a></li>
+                        <li class="sec"><a href="#">MEMBER'S CLUB</a></li>
+                        <li class="sec"><a href="#">MENU</a></li>
+                        <li class="sec"><a href="#">STORE</a></li>
+                        <li class="sec"><a href="#">THE COFFEE BEAN</a></li>
+                        <li class="sec"><a href="#">CBTL</a></li>
+                        <li class="sec"><a href="#"><img src="img/ico_search.png" alt="검색버튼"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 메인 메뉴 시작 -->
+        <div id="content">
+            <div id="wrap1">
+                <div class="mainADV">
+                    <!-- 신메뉴 광고 및 이벤트 광고 영역 -->
+                    <a href="#">
+                        <span class="thumb"><img src="img/1.jpg" alt="메인이미지" /></span>
+                    </a>
+                </div>
+                <div class="subADV">
+                    <a href="#">
+                        <span class="thumb2"><img src="img/2.jpg" alt="서브이미지" /></span>
+                    </a>
+                </div>
+            </div>
+            <div class="menuLab">
+                <div class="headline">
+                    <h2 class="mainTitle">MD'S PICK</h2>
+                    <!-- auto slide로 넘어가는 추천상품 영역 -->
+                    <div class="slideImg">
+                        <div class="product">
+                            <a href="#">
+                                <img src="img/3.jpg" /><br>
+                                <span class="name">[1+1] 커피빈 드립백(디카페인) 5개입</span>
+                                <br>
+                                <span class="price">5,900원</span>
+                                <br>
+                                <span class="soldout">품절</span>
+                                <br>
+                            </a>
+                            <button class="quickview" onclick="quickView('1589')">QUICKVIEW</button>
+                        </div>
+                        <div class="product">
+                            <a href="#">
+                                <img src="img/4.jpg" /><br>
+                                <span class="name">[1+1] 커피빈 드립백(모카자바 블렌드) 5개입</span>
+                                <br>
+                                <span class="price">5,900원</span>
+                                <br>
+                                <span class="soldout">품절</span>
+                                <br>
+                            </a>
+                            <button class="quickview" onclick="quickView('1589')">QUICKVIEW</button>
+                        </div>
+                        <div class="product">
+                            <a href="#">
+                                <img src="img/5.jpg" /><br>
+                                <span class="name">[1+1] 커피빈 드립백(콜롬비아 다크) 5개입</span>
+                                <br>
+                                <span class="price">5,900원</span>
+                                <br>
+                                <span class="soldout">품절</span>
+                                <br>
+                            </a>
+                            <button class="quickview" onclick="quickView('1589')">QUICKVIEW</button>
+                        </div>
+                        <div class="product">
+                            <a href="#">
+                                <img src="img/6.jpg" /><br>
+                                <span class="name">[-20% OFF] 커피빈 헤이즐넛 라떼 파우치(10개입)</span>
+                                <br>
+                                <span class="fixed_price">15,000원</span>
+                                <br>
+                                <span class="price">12,000원</span>
+                                <br>
+                            </a>
+                            <button class="quickview" onclick="quickView('1589')">QUICKVIEW</button>
+                        </div>
+                        <div class="product">
+                            <a href="#">
+                                <img src="img/7.jpg" /><br>
+                                <span class="name">[1+1] 초코시나몬 크래커</span>
+                                <br>
+                                <span class="num">초코시나몬 크래커</span>
+                                <br>
+                                <span class="price">2,800원</span>
+                                <br>
+                            </a>
+                            <button class="quickview" onclick="quickView('1589')">QUICKVIEW</button>
+                        </div>
+                        <div class="product">
+                            <a href="#">
+                                <img src="img/8.jpg" /><br>
+                                <span class="name">[1+1] 얼그레이 크래커</span>
+                                <br>
+                                <span class="num">얼그레이 크래커</span>
+                                <br>
+                                <span class="price">2,800원</span>
+                                <br>
+                                <span class="soldout">품절</span> <br>
+                            </a>
+                            <button class="quickview" onclick="quickView('1589')">QUICKVIEW</button>
+                        </div>
+                        <div class="product">
+                            <a href="#">
+                                <img src="img/9.jpg" /><br>
+                                <span class="name">커피빈 더블샷 라떼 30T</span>
+                                <br>
+                                <span class="num">커피빈 더블샷 라떼 (14.3g*30T)</span>
+                                <br>
+                                <span class="price">14,000원</span>
+                                <br>
+                            </a>
+                            <button class="quickview" onclick="quickView('1589')">QUICKVIEW</button>
+                        </div>
+                        <div class="product">
+                            <a href="#">
+                                <img src="img/10.jpg" /><br>
+                                <span class="name">커피빈 카페 라떼 30T</span><br>
+                                <span class="num">커피빈 카페 라떼 (14g*30T)</span><br>
+                                <span class="price">13,000원</span> <br>
+                            </a>
+                            <button class="quickview" onclick="quickView('1589')">QUICKVIEW</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!----------->
+                <div class="headline">
+                    <div class="box2">
+                        <h2 class="mainTitle">What's new</h2>
+                        <div class="slideImg2">
+                            <div class="product2">
+                                <a href="#">
+                                    <img src="img/11.jpg" alt="2020 12 Amazing Christmas" />
+                                    <br>
+                                    <span class="pname">2020 12 Amazing Christmas</span>
+                                </a>
+                            </div>
+                            <div class="product2">
+                                <a href="#">
+                                    <img src="img/12.jpg" alt="2020 12 Amazing Christmas" />
+                                    <br>
+                                    <span class="pname">2020 12 Amazing Christmas</span>
+                                </a>
+                            </div>
+                            <div class="product2">
+                                <a href="#">
+                                    <img src="img/13.jpg" alt="2020 12 Amazing Christmas" />
+                                    <br>
+                                    <span class="pname">2020 12 Amazing Christmas</span>
+                                </a>
+                            </div>
+                            <div class="product2">
+                                <a href="#">
+                                    <img src="img/14.jpg" alt="2020 12 Amazing Christmas" />
+                                    <br>
+                                    <span class="pname">2020 12 Amazing Christmas</span>
+                                </a>
+                            </div>
+                            <div class="product2">
+                                <a href="#">
+                                    <img src="img/15.jpg" alt="2020 12 Amazing Christmas" />
+                                    <br>
+                                    <span class="pname">2020 12 Amazing Christmas</span>
+                                </a>
+                            </div>
+                            <div class="product2">
+                                <a href="#">
+                                    <img src="img/16.jpg" alt="2020 12 Amazing Christmas" />
+                                    <br>
+                                    <span class="pname">2020 12 Amazing Christmas</span>
+                                </a>
+                            </div>
+                            <div class="product2">
+                                <a href="#">
+                                    <img src="img/17.jpg" alt="2020 12 Amazing Christmas" />
+                                    <br>
+                                    <span class="pname">2020 12 Amazing Christmas</span>
+                                </a>
+                            </div>
+                            <div class="product2">
+                                <a href="#">
+                                    <img src="img/18.jpg" alt="2020 12 Amazing Christmas" />
+                                    <br>
+                                    <span class="pname">2020 12 Amazing Christmas</span>
+                                </a>
+                            </div>
+                            <div class="product2">
+                                <a href="#">
+                                    <img src="img/19.jpg" alt="2020 12 Amazing Christmas" />
+                                    <br>
+                                    <span class="pname">2020 12 Amazing Christmas</span>
+                                </a>
+                            </div>
+                            <div class="product2">
+                                <a href="#">
+                                    <img src="img/20.jpg" alt="2020 12 Amazing Christmas" />
+                                    <br>
+                                    <span class="pname">2020 12 Amazing Christmas</span>
+                                </a>
+                            </div>
+                            <div class="product2">
+                                <a href="#">
+                                    <img src="img/21.jpg" alt="2020 12 Amazing Christmas" />
+                                    <br>
+                                    <span class="pname">2020 12 Amazing Christmas</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!----------->
+            <div class="instaArea">
+                <h2>#커피빈코리아 #커피빈맛있다 #커피빈사랑해</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/p/CIpOXLwJkQ1/" target="_blank">
+                            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/130101247_2744013042531446_3764029243401204484_n.jpg?_nc_cat=108&ccb=2&_nc_sid=8ae9d6&_nc_ohc=DF39Nif1SvEAX-Sa17F&_nc_ht=scontent.cdninstagram.com&oh=d7c2be421fd38fdb89495b771729f246&oe=5FF81A36" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CIpMnabpHuV/" target="_blank">
+                            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/130951094_210939557203551_7074633228466325098_n.jpg?_nc_cat=108&ccb=2&_nc_sid=8ae9d6&_nc_ohc=Cv-foYIy5hYAX8DpU-S&_nc_ht=scontent.cdninstagram.com&oh=2347af888d9b2cd5ac1b65f3d0caf43a&oe=5FFA1E52" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CInK3txJLJA/" target="_blank">
+                            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/130441308_240615210791993_2302694170007949454_n.jpg?_nc_cat=109&ccb=2&_nc_sid=8ae9d6&_nc_ohc=hYoNvEGYXFYAX90L71l&_nc_ht=scontent.cdninstagram.com&oh=fd40cdc4ac9fefab5860449c5e09def9&oe=5FF8C2C0" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CImcKtFpmGi/" target="_blank">
+                            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/130302973_428524938316250_533462499646697156_n.jpg?_nc_cat=100&ccb=2&_nc_sid=8ae9d6&_nc_ohc=o9x38v8NydUAX8GOgWQ&_nc_ht=scontent.cdninstagram.com&oh=75f8fd26ef7c96a6a429f61c3e23a0f8&oe=5FF6B6D2" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CIkru1fJNf8/" target="_blank">
+                            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/129736155_784098902142781_5566395808461736743_n.jpg?_nc_cat=100&ccb=2&_nc_sid=8ae9d6&_nc_ohc=8DjbeCq3H1AAX95mpgs&_nc_ht=scontent.cdninstagram.com&oh=012058ec3dee14a374863fe475164bbb&oe=5FFA1B6D" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CIh_yL5JpKR/" target="_blank">
+                            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/129763337_774500639947242_4546392342896910078_n.jpg?_nc_cat=106&ccb=2&_nc_sid=8ae9d6&_nc_ohc=edfVKjDvFOUAX-0L670&_nc_ht=scontent.cdninstagram.com&oh=809be9588092e9a0158dd2fe30d6dcff&oe=5FF93C33" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CIh9GcgpfRW/" target="_blank">
+                            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/129678803_129835732276244_2836239738137691482_n.jpg?_nc_cat=101&ccb=2&_nc_sid=8ae9d6&_nc_ohc=BrNP5dkZS1gAX-9ScWL&_nc_ht=scontent.cdninstagram.com&oh=2073cfe38234165e83e403c97e2f348f&oe=5FF7A480" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CIhJVbYpgUE/" target="_blank">
+                            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/129760552_112169254072507_6466424348164764629_n.jpg?_nc_cat=104&ccb=2&_nc_sid=8ae9d6&_nc_ohc=5Q1hsILM4FEAX8AkSxh&_nc_ht=scontent.cdninstagram.com&oh=c1dc66b1b6d9d706a0367bcfde7e2ef7&oe=5FF81CDF" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CIfaOfXJMzA/" target="_blank">
+                            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/129490356_750419778898214_3754077559558928455_n.jpg?_nc_cat=101&ccb=2&_nc_sid=8ae9d6&_nc_ohc=AAEdT9-MWPEAX-52XI_&_nc_ht=scontent.cdninstagram.com&oh=b6d7604022e0480f56822a74783dc050&oe=5FF41C49" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CIfY9IQJ4lA/" target="_blank">
+                            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/129732253_662061374463465_662757954879180860_n.jpg?_nc_cat=109&ccb=2&_nc_sid=8ae9d6&_nc_ohc=jGflwahg37kAX8cHK3B&_nc_ht=scontent.cdninstagram.com&oh=386c60f114d3156189b6a4f2e1d6ca88&oe=5FF6E9DC" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CIfDZ9kpSw9/" target="_blank">
+                            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/129730098_820250848815396_2141858931914392818_n.jpg?_nc_cat=108&ccb=2&_nc_sid=8ae9d6&_nc_ohc=vhHKi34zppcAX-E5nuf&_nc_ht=scontent.cdninstagram.com&oh=f7404d132cae7b69a7eafa2bb67e1b5d&oe=5FF9D50C" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CIXqxGEp3s4/" target="_blank">
+                            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/128995314_3522536267859471_6627507685254988664_n.jpg?_nc_cat=102&ccb=2&_nc_sid=8ae9d6&_nc_ohc=7whC8YqApUsAX--ZjhG&_nc_ht=scontent.cdninstagram.com&oh=3a19e49c4e1cd53fc5010628edf6f31a&oe=5FF906EB" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <a href="https://www.instagram.com/coffeebean_kr/" class="btn" target="_blank">OUR INSTAGRAM - @COFFEEBEAN_KR</a>
+            </div>
+        </div>
+        <div id="footer">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="plugins/slick/slick.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('.slideImg').slick({
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            autoplay: true,
+            autoplaySpeed: 4000,
+        });
+    });
+    $(function() {
+        $('.slideImg2').slick({
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplay: true,
+            autoplaySpeed: 4000,
+        });
+    });
+    </script>
+</body>
+
+</html>
