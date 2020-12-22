@@ -79,7 +79,7 @@
     }
 
     /*리스트 속성으로 묶인 상단 고정메뉴 링크부분 위치 설정*/
-    li a {
+    .fir li a {
         display: block;
         padding: 3px 8px;
         text-decoration: none;
@@ -132,15 +132,15 @@
 
     /*두번째 메뉴의 커피빈 로고 위치 설정*/
     .sec:nth-child(1) {
-        top: -1px;
+        top: 5px;
     }
 
-
+    /*추천상품과 신상품 광고 영역 */
     .headline {
         font-size: 20px;
         font-weight: bold;
         width: 1200px;
-        height: 700px;
+        height: 650px;
         position: relative;
         margin: auto;
         text-align: center;
@@ -186,9 +186,10 @@
     }
 
     .box3 {
-        width: 1300px;
+        width: 1200px;
         height: 420px;
         margin: auto;
+        margin-top: 5px;
     }
 
     .instaArea li {
@@ -197,7 +198,10 @@
         border: 0px;
     }
 
-    .instaArea img {
+    .instaArea img,
+    .instaArea li a {
+        padding: 0;
+        margin: 0;
         width: 195px;
         height: 195px;
     }
@@ -205,21 +209,32 @@
     .titlehash {
         text-align: center;
         margin: auto;
-        line-height: 60px;
+        color: #fff;
+        line-height: 80px;
+
+
     }
 
     .instaBtn {
-        line-height: 60px;
+        line-height: 40px;
         display: block;
         text-align: center;
+        color: #fff;
         background-color: orange;
         width: 400px;
         margin: auto;
+        margin-top: 10px;
+    }
+
+    .sitemap {
+        height: 300px;
     }
 
     .sitemap,
     .boxF {
-        width: 1250px;
+        display: block;
+        width: 1200px;
+
         margin: auto;
     }
 
@@ -227,7 +242,7 @@
         display: inline-block;
         float: left;
         text-align: center;
-        width: 190px;
+        width: 200px;
     }
 
     .clear {
@@ -235,6 +250,13 @@
         display: block;
         clear: both;
         float: none;
+    }
+
+    .wrap1 {
+        height: 205px;
+        position: relative;
+        margin: auto;
+        top: 53px;
     }
 
     .link,
@@ -569,62 +591,64 @@
         </div>
         <div id="footer">
             <div class="sitemap">
-                <div class="footerMenu">
-                    <h2>Buy Online</h2>
-                    <ul>
-                        <li><a href="#">VIEW ALL</a></li>
-                        <li><a href="#">커피</a></li>
-                        <li><a href="#">티</a></li>
-                        <li><a href="#">CBTL 시스템</a></li>
-                        <li><a href="#">상품</a></li>
-                    </ul>
-                </div>
-                <div class="footerMenu">
-                    <h2>Member`s Club</h2>
-                    <ul>
-                        <li><a href="#">커피빈 멤버스 클럽</a></li>
-                        <li><a href="#">나의 커피빈</a></li>
-                    </ul>
-                </div>
-                <div class="footerMenu">
-                    <h2>Menu</h2>
-                    <ul>
-                        <li><a href="#">음료</a></li>
-                        <li><a href="#">푸드</a></li>
-                        <li><a href="#">상품</a></li>
-                        <li><a href="#">카드</a></li>
-                    </ul>
-                </div>
-                <div class="footerMenu">
-                    <h2>Store</h2>
-                    <ul>
-                        <li><a href="#">매장 찾기</a></li>
-                        <li><a href="#">신규 매장</a></li>
-                    </ul>
-                </div>
-                <div class="footerMenu">
-                    <h2>The Coffee Bean</h2>
-                    <ul>
-                        <li><a href="#">커피빈 코리아</a></li>
-                        <li><a href="#">커피빈 소식</a></li>
-                        <li><a href="#">사회공헌</a></li>
-                        <li><a href="#"><b>제휴 마케팅 제안</b></a></li>
-                        <li><a href="#">채용안내</a></li>
-                        <li><a href="#">신규 입점 제의</a></li>
-                        <li><a href="#">결산공고</a></li>
-                    </ul>
-                </div>
-                <div class="footerMenu">
-                    <h2>CBTL</h2>
-                    <ul>
-                        <li><a href="#">CBTL 가이드</a></li>
-                        <li><a href="#">CBTL 서비스</a></li>
-                        <li><a href="#">AS 안내</a></li>
-                        <li><a href="#">AS 신청</a></li>
-                        <li><a href="#">CBTL FAQ</a></li>
-                        <li><a href="#">제품설명서</a></li>
-                        <li><a href="#">기업용 머신</a></li>
-                    </ul>
+                <div class="wrap1">
+                    <div class="footerMenu">
+                        <h2>Buy Online</h2>
+                        <ul>
+                            <li><a href="#">VIEW ALL</a></li>
+                            <li><a href="#">커피</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">CBTL 시스템</a></li>
+                            <li><a href="#">상품</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerMenu">
+                        <h2>Member`s Club</h2>
+                        <ul>
+                            <li><a href="#">커피빈 멤버스 클럽</a></li>
+                            <li><a href="#">나의 커피빈</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerMenu">
+                        <h2>Menu</h2>
+                        <ul>
+                            <li><a href="#">음료</a></li>
+                            <li><a href="#">푸드</a></li>
+                            <li><a href="#">상품</a></li>
+                            <li><a href="#">카드</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerMenu">
+                        <h2>Store</h2>
+                        <ul>
+                            <li><a href="#">매장 찾기</a></li>
+                            <li><a href="#">신규 매장</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerMenu">
+                        <h2>The Coffee Bean</h2>
+                        <ul>
+                            <li><a href="#">커피빈 코리아</a></li>
+                            <li><a href="#">커피빈 소식</a></li>
+                            <li><a href="#">사회공헌</a></li>
+                            <li><a href="#"><b>제휴 마케팅 제안</b></a></li>
+                            <li><a href="#">채용안내</a></li>
+                            <li><a href="#">신규 입점 제의</a></li>
+                            <li><a href="#">결산공고</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerMenu">
+                        <h2>CBTL</h2>
+                        <ul>
+                            <li><a href="#">CBTL 가이드</a></li>
+                            <li><a href="#">CBTL 서비스</a></li>
+                            <li><a href="#">AS 안내</a></li>
+                            <li><a href="#">AS 신청</a></li>
+                            <li><a href="#">CBTL FAQ</a></li>
+                            <li><a href="#">제품설명서</a></li>
+                            <li><a href="#">기업용 머신</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="clear"></div>
@@ -639,6 +663,7 @@
                     <a href="#">멤버스카드이용약관</a>ㅣ
                     <a href="#">위치기반서비스 이용약관</a>
                 </div>
+                <br>
                 <div class="address">
                     (주)커피빈코리아 대표이사 박상배<span> ㅣ </span>
                     사업자등록번호 120-86-07029 <span> ㅣ </span>
