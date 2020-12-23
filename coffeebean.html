@@ -81,6 +81,11 @@
 
     }
 
+    #forLeft {
+        display: block;
+        margin-left: 20px;
+    }
+
     #header2 li a:hover {
         color: #CF661A;
     }
@@ -141,6 +146,10 @@
     /*두번째 메뉴의 커피빈 로고 위치 설정*/
     .sec:nth-child(1) {
         top: 5px;
+    }
+
+    .sec:nth-child(8) {
+        left: 30px;
     }
 
     /*추천상품과 신상품 광고 영역 */
@@ -289,10 +298,10 @@
     /**메뉴 구현부분 */
     .sub {
         position: absolute;
-        margin-top: 1px;
         width: 1200px;
-        height: 400px;
+        height: 420px;
         left: -75%;
+        top: 70px;
         background-color: #eee;
     }
 
@@ -301,22 +310,79 @@
 
     }
 
-
     .sub {
         display: none;
     }
 
-    .stitle {}
 
     .Sbox {
-        background-color: #d5d5;
+
         display: block;
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
         float: left;
+        margin: 15px 15px 0 15px;
     }
 
-    .naeyong {}
+    .titleMini {
+        display: block;
+        padding: 5px 10px;
+        font-weight: bold;
+        font-size: 16px;
+
+    }
+
+    .naeyong li {
+        display: block;
+        padding: 2px;
+        margin-left: 10px;
+    }
+
+    /* 펼쳐지는 메뉴영역 개별 크기 지정 */
+    .subsize2 {
+        width: 570px;
+        height: 240px;
+    }
+
+    .subsize3 {
+        width: 900px;
+        margin-left: -100px;
+    }
+
+    .subsize4 {
+        width: 130px;
+        height: 150px;
+        margin-left: 80px;
+    }
+
+    .subsize5 {
+        margin-left: -550px;
+    }
+
+    .subsize6 {
+        width: 180px;
+        height: 300px;
+        margin-left: 50px;
+
+    }
+
+    .subsize6 .stitle {
+        width: 140px;
+    }
+
+    .naeyong1 {
+        width: 200px;
+    }
+
+    .naeyong2 {
+        width: 280px;
+        margin-left: -20px;
+
+    }
+
+    .naeyong22 {
+        margin-left: -15px;
+    }
     </style>
 </head>
 
@@ -343,72 +409,72 @@
                                 <a href="#"><img src="img/logo.png" alt=" 커피빈 로고"></a></li>
                             <!-- 지금 만지는 중인 섹션 시작점 -->
                             <li class="sec menu-item pull-left">
-                                <a href="#">BUY ONLINE</a>
+                                <span id="forLeft"><a href="#">BUY ONLINE</a></span>
                                 <ul class="sub">
                                     <span class="Sbox">
-                                        <li class="stitle"><a href="#" class="lineH">View All</a></li>
+                                        <li class="stitle"><a href="#"><span class="titleMini">View All</span></a></li>
                                     </span>
                                     <span class="Sbox">
-                                        <li class="stitle"><a href="#">분쇄형 커피</a>
+                                        <li class="stitle"><a href="#"><span class="titleMini">분쇄형 커피</span></a>
                                             <ul class="naeyong">
-                                                <li><a href="#">- 드립백</a></li>
+                                                <li><a href="#">- 드립백</a></li><br>
                                                 <li><a href="#">- 소풍커피</a></li>
                                             </ul>
                                         </li>
                                     </span>
                                     <span class="Sbox">
-                                        <li class="stitle"><a href="#">파우치 커피</a>
+                                        <li class="stitle"><a href="#"><span class="titleMini">파우치 커피</span></a>
                                             <ul class="naeyong">
                                                 <li><a href="#">- 파우치커피</a></li>
                                             </ul>
                                         </li>
                                     </span>
                                     <span class="Sbox">
-                                        <li class="stitle"><a href="#">캡슐커피</a>
+                                        <li class="stitle"><a href="#"><span class="titleMini">캡슐커피</span></a>
                                             <ul class="naeyong">
-                                                <li><a href="#">- 네스프레소 호환용</a></li>
+                                                <li><a href="#">- 네스프레소 호환용</a></li><br>
                                                 <li><a href="#">- CBTL 호환용</a></li>
                                             </ul>
                                         </li>
                                     </span>
                                     <span class="Sbox">
-                                        <li class="stitle"><a href="#">원두</a>
+                                        <li class="stitle"><a href="#"><span class="titleMini">원두</span></a>
                                             <ul class="naeyong">
-                                                <li><a href="#">- 원두 가이드</a></li>
-                                                <li><a href="#">- MD's Pick</a></li>
-                                                <li><a href="#">- 라이트 로스트</a></li>
-                                                <li><a href="#">- 미디엄 로스트</a></li>
+                                                <li><a href="#">- 원두 가이드</a></li><br>
+                                                <li><a href="#">- MD's Pick</a></li><br>
+                                                <li><a href="#">- 라이트 로스트</a></li><br>
+                                                <li><a href="#">- 미디엄 로스트</a></li><br>
                                                 <li><a href="#">- 다크 로스트</a></li>
                                             </ul>
                                         </li>
                                     </span>
                                     <span class="Sbox">
-                                        <li class="stitle"><a href="#">티</a>
+                                        <li class="stitle"><a href="#"><span class="titleMini">티</span></a>
                                             <ul class="naeyong">
-                                                <li><a href="#">- 티 가이드</a></li>
-                                                <li><a href="#">- 클래식 티</a></li>
-                                                <li><a href="#">- 허브티</a></li>
+                                                <li><a href="#">- 티 가이드</a></li><br>
+                                                <li><a href="#">- 클래식 티</a></li><br>
+                                                <li><a href="#">- 허브티</a></li><br>
                                                 <li><a href="#">- 프룻티</a></li>
                                             </ul>
                                         </li>
                                     </span>
                                     <span class="Sbox">
-                                        <li class="stitle"><a href="#">상품</a>
+                                        <li class="stitle"><a href="#"><span class="titleMini">상품</span></a>
                                             <ul class="naeyong">
-                                                <li><a href="#">- 스틱커피</a></li>
-                                                <li><a href="#">- 아이스 텀블러</a></li>
-                                                <li><a href="#">- 보온 텀블러</a></li>
-                                                <li><a href="#">- 머그</a></li>
-                                                <li><a href="#">- 파우더</a></li>
-                                                <li><a href="#">- 푸드</a></li>
+                                                <li><a href="#">- 스틱커피</a></li><br>
+                                                <li><a href="#">- 아이스 텀블러</a></li><br>
+                                                <li><a href="#">- 보온 텀블러</a></li><br>
+                                                <li><a href="#">- 머그</a></li><br>
+                                                <li><a href="#">- 파우더</a></li><br>
+                                                <li><a href="#">- 푸드</a></li><br>
                                                 <li><a href="#">- 기타상품</a></li>
                                             </ul>
                                         </li>
                                     </span>
                                     <span class="Sbox">
-                                        <li class="stitle"><a href="#">CBTL 시스템</a>
+                                        <li class="stitle"><a href="#"><span class="titleMini">CBTL 시스템</span></a>
                                             <ul class="naeyong">
-                                                <li><a href="#">- CBTL 머신</a></li>
+                                                <li><a href="#">- CBTL 머신</a></li><br>
                                                 <li><a href="#">- 액세서리</a></li>
                                             </ul>
                                         </li>
@@ -416,52 +482,165 @@
                                 </ul>
                             </li>
                             <li class="sec menu-item pull-left">
-                                <a href="#">MEMBER'S CLUB</a>
-                                <ul class="sub">
-                                    <li><a href="#">View All</a></li>
-                                    <li><a href="#">분쇄형 커피</a></li>
-                                    <li><a href="#">드립백</a></li>
-                                    <li><a href="#">소풍커피</a></li>
+                                <span id="forLeft"><a href="#">MEMBER'S CLUB</a></span>
+                                <ul class="sub subsize2">
+                                    <span class="Sbox">
+                                        <li class="stitle"><a href="#"><span class="titleMini">커피빈 멤버스 클럽</span></a>
+                                            <ul class="naeyong">
+                                                <li><a href="#">- 멤버스 클럽</a></li><br>
+                                                <li><a href="#">- 커피빈 카드</a></li><br>
+                                                <li><a href="#">- 커피빈 e-Gift</a></li><br>
+                                            </ul>
+                                        </li>
+                                    </span>
+                                    <span class="Sbox">
+                                        <li class="stitle"><a href="#"><span class="titleMini">나의 커피빈</span></a>
+                                            <ul class="naeyong">
+                                                <li><a href="#">- 나의 콩/e쿠폰보기</a></li><br>
+                                                <li><a href="#">- 나의 커피빈 카드</a></li><br>
+                                                <li><a href="#">- 커피빈 카드 등록</a></li><br>
+                                                <li><a href="#">- 분실신고/환불신청</a></li><br>
+                                                <li><a href="#">- e-Gift 구매</a></li>
+                                            </ul>
+                                        </li>
+                                    </span>
                                 </ul>
                             </li>
                             <li class="sec menu-item pull-left">
-                                <a href="#">MENU</a>
-                                <ul class="sub">
-                                    <li><a href="#">View All</a></li>
-                                    <li><a href="#">분쇄형 커피</a></li>
-                                    <li><a href="#">드립백</a></li>
-                                    <li><a href="#">소풍커피</a></li>
+                                <span id="forLeft"><a href="#">MENU</a></span>
+                                <ul class="sub subsize3">
+                                    <span class="Sbox">
+                                        <li class="stitle"><a href="#"><span class="titleMini">음료</span></a>
+                                            <ul class="naeyong naeyong1">
+                                                <li><a href="#">- 티</a></li><br>
+                                                <li><a href="#">- 티 라떼</a></li><br>
+                                                <li><a href="#">- 에스프레소 음료</a></li><br>
+                                                <li><a href="#">- 아이스 블렌디드(Coffee)</a></li><br>
+                                                <li><a href="#">- 아이스 블렌디드(Non-Coffee)</a></li><br>
+                                                <li><a href="#">- 브루드 커피</a></li><br>
+                                                <li><a href="#">- 커피빈 주스(병음료)</a></li><br>
+                                                <li><a href="#">- 기타 제조 음료</a></li><br>
+                                                <li><a href="#">- 엑스트라</a></li>
+                                            </ul>
+                                        </li>
+                                    </span>
+                                    <span class="Sbox">
+                                        <li class="stitle"><a href="#"><span class="titleMini">푸드</span></a>
+                                            <ul class="naeyong">
+                                                <li><a href="#">- 베이커리</a></li><br>
+                                                <li><a href="#">- 케익</a></li><br>
+                                                <li><a href="#">- 샌드위치</a></li><br>
+                                                <li><a href="#">- 기타</a></li>
+                                            </ul>
+                                        </li>
+                                    </span>
+                                    <span class="Sbox">
+                                        <li class="stitle"><a href="#"><span class="titleMini">상품</span></a>
+                                            <ul class="naeyong">
+                                                <li><a href="#">- 아이스 텀블러</a></li><br>
+                                                <li><a href="#">- 보온 텀블러</a></li><br>
+                                                <li><a href="#">- 머그</a></li><br>
+                                                <li><a href="#">- 소풍커피</a></li><br>
+                                                <li><a href="#">- 스틱커피</a></li><br>
+                                                <li><a href="#">- 파우더</a></li><br>
+                                                <li><a href="#">- 기타상품</a></li>
+                                            </ul>
+                                        </li>
+                                    </span>
+                                    <span class="Sbox">
+                                        <li class="stitle"><a href="#"><span class="titleMini">원두</span></a>
+                                            <ul class="naeyong">
+                                                <li><a href="#">- 원두 가이드</a></li><br>
+                                                <li><a href="#">- MD's Pick</a></li><br>
+                                                <li><a href="#">- 라이트 로스트</a></li><br>
+                                                <li><a href="#">- 미디엄 로스트</a></li><br>
+                                                <li><a href="#">- 다크 로스트</a></li>
+                                            </ul>
+                                        </li>
+                                    </span>
                                 </ul>
                             </li>
                             <li class="sec menu-item pull-left">
-                                <a href="#">STORE</a>
-                                <ul class="sub">
-                                    <li><a href="#">View All</a></li>
-                                    <li><a href="#">분쇄형 커피</a></li>
-                                    <li><a href="#">드립백</a></li>
-                                    <li><a href="#">소풍커피</a></li>
+                                <span id="forLeft"><a href="#">STORE</a></span>
+                                <ul class="sub subsize4">
+                                    <span class="Sbox">
+                                        <li class="stitle"><a href="#"><span class="titleMini">매장 찾기</span></a>
+                                        </li>
+                                        <li class="stitle"><a href="#"><span class="titleMini">신규 매장</span></a>
+                                        </li>
+                                    </span>
                                 </ul>
                             </li>
                             <li class="sec menu-item pull-left">
-                                <a href="#">THE COFFEE BEAN</a>
-                                <ul class="sub">
-                                    <li><a href="#">View All</a></li>
-                                    <li><a href="#">분쇄형 커피</a></li>
-                                    <li><a href="#">드립백</a></li>
-                                    <li><a href="#">소풍커피</a></li>
+                                <span id="forLeft"><a href="#">THE COFFEE BEAN</a></span>
+                                <ul class="sub subsize5">
+                                    <span class="Sbox">
+                                        <li class="stitle"><a href="#"><span class="titleMini">커피빈 코리아</span></a>
+                                            <ul class="naeyong naeyong1">
+                                                <li><a href="#">- Simply the Best</a></li><br>
+                                                <li><a href="#">- 커피빈 커피와 티</a></li>
+                                            </ul>
+                                        </li>
+                                    </span>
+                                    <span class="Sbox">
+                                        <li class="stitle"><a href="#"><span class="titleMini">커피빈 소식</span></a>
+                                            <ul class="naeyong">
+                                                <li><a href="#">- 새소식</a></li><br>
+                                                <li><a href="#">- 프로모션</a></li><br>
+                                                <li><a href="#">- 공지사항</a></li><br>
+                                                <li><a href="#">- 소셜미디어</a></li>
+                                            </ul>
+                                        </li>
+                                    </span>
+                                    <span class="Sbox">
+                                        <li class="stitle"><a href="#"><span class="titleMini naeyong22">사회공헌</span></a>
+                                            <ul class="naeyong naeyong2">
+                                                <li><a href="#">- 국제 사회공헌</a></li><br>
+                                                <li><a href="#">- 필리핀 청소년 교육혜택 지원하기</a></li><br>
+                                                <li><a href="#">- 성경원, 나눔의 샘 후원 결연</a></li>
+                                            </ul>
+                                        </li>
+                                    </span>
+                                    <span class="Sbox">
+                                        <li class="stitle"><a href="#"><span class="titleMini">채용안내</span></a>
+                                            <ul class="naeyong">
+                                                <li><a href="#">- 채용안내 바로가기</a></li><br>
+                                                <li><a href="#">- 채용 카테고리</a></li>
+                                            </ul>
+                                        </li>
+                                    </span>
+                                    <span class="Sbox">
+                                        <li class="stitle"><a href="#"><span class="titleMini">신규 입점</span></a>
+                                        </li>
+                                        <li class="stitle"><a href="#"><span class="titleMini">결산 공고</span></a>
+                                        </li>
+                                    </span>
                                 </ul>
                             </li>
                             <li class="sec menu-item pull-left">
-                                <a href="#">CBTL</a>
-                                <ul class="sub">
-                                    <li><a href="#">View All</a></li>
-                                    <li><a href="#">분쇄형 커피</a></li>
-                                    <li><a href="#">드립백</a></li>
-                                    <li><a href="#">소풍커피</a></li>
+                                <span id="forLeft"><a href="#">CBTL</a></span>
+                                <ul class="sub subsize6">
+                                    <span class="Sbox">
+                                        <li class="stitle"><a href="#"><span class="titleMini">CBTL 가이드</span></a>
+                                        </li>
+                                        <li class="stitle"><a href="#"><span class="titleMini">CBTL 서비스</span></a>
+                                        </li>
+                                        <li class="stitle"><a href="#"><span class="titleMini">AS 안내</span></a>
+                                            <!- -->
+                                        </li>
+                                        <li class="stitle"><a href="#"><span class="titleMini">AS 신청</span></a>
+                                        </li>
+                                        <li class="stitle"><a href="#"><span class="titleMini">CBTL FAQ</span></a>
+                                        </li>
+                                        <li class="stitle"><a href="#"><span class="titleMini">제품설명서</span></a>
+                                        </li>
+                                        <li class="stitle"><a href="#"><span class="titleMini">기업용 머신</span></a>
+                                        </li>
+                                    </span>
                                 </ul>
                             </li>
                             <li class="sec">
-                                <a href="#"><img src="img/ico_search.png" alt="검색버튼"></a>
+                                <span id="forLeft"><a href="#"><img src="img/ico_search.png" alt="검색버튼"></a></span>
                             </li>
                         </ul>
                         <!-- 지금 만지는 중인 섹션 마지막부분 -->
@@ -738,8 +917,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/p/CIfaOfXJMzA/" target="_blank">
-                            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/129490356_750419778898214_3754077559558928455_n.jpg?_nc_cat=101&ccb=2&_nc_sid=8ae9d6&_nc_ohc=AAEdT9-MWPEAX-52XI_&_nc_ht=scontent.cdninstagram.com&oh=b6d7604022e0480f56822a74783dc050&oe=5FF41C49" alt="">
+                        <a href="https://www.instagram.com/p/CIhJVbYpgUE/" target="_blank">
+                            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/129760552_112169254072507_6466424348164764629_n.jpg?_nc_cat=104&ccb=2&_nc_sid=8ae9d6&_nc_ohc=5Q1hsILM4FEAX8AkSxh&_nc_ht=scontent.cdninstagram.com&oh=c1dc66b1b6d9d706a0367bcfde7e2ef7&oe=5FF81CDF" alt="">
                         </a>
                     </li>
                     <li>
@@ -876,7 +1055,7 @@
 
     $(function() {
         $('.menu-item').hover(function() {
-            $(this).find(".sub").fadeToggle(300);
+            $(this).find(".sub").fadeToggle(500);
         });
     });
     </script>
